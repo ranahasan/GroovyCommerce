@@ -1,0 +1,24 @@
+{
+  "name": "groovy-commerce",
+  "version": "1.0.0",
+  "description": "demo ecommerce website built using grails and angularjs",
+  "main": " ",
+  "scripts": {
+    "build": "gulp build",
+    "regroup": "gulp move-vendor-files"
+  },
+  "keywords": [
+    "ecommerce",
+    "grails",
+    "angularjs"
+  ],
+  "author": "matijacvrk@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-inject": "^4.3.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}
