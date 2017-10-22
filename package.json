@@ -4,6 +4,7 @@
   "description": "demo ecommerce website built using grails and angularjs",
   "main": " ",
   "scripts": {
+    "compile-scripts": "gulp compile-scripts",  
     "build": "gulp build",
     "regroup": "gulp move-vendor-files"
   },
