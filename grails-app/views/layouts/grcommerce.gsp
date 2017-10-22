@@ -15,8 +15,7 @@
     <asset:javascript src="application.js"/>
 </head>
 <body ng-controller="MainController">
-%{--<dashboard></dashboard>--}%
-<h1>[( 'Hello angularjs' )]</h1>
+<dashboard></dashboard>
 <g:layoutBody/>
 
 <div class="footer" role="contentinfo"></div>

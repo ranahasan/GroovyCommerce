@@ -7,7 +7,6 @@
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
 </head>
 <body>
-[( pageTitle )]
-<div ng-view></div>
+<div class="offset-from-navbar" ng-view></div>
 </body>
 </html>

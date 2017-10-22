@@ -9,7 +9,6 @@
         return {
             restrict: 'EA',
             scope: false,
-            controller: 'TypeFormController',
             templateUrl: '/getForm'
         }
     }
