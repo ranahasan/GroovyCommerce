@@ -8,5 +8,6 @@
 </head>
 <body>
 [( pageTitle )]
+<div ng-view></div>
 </body>
 </html>

@@ -1,6 +1,7 @@
 <!doctype html>
 <html ng-app="grCommerce" lang="en">
 <head>
+    <base href="/">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>
@@ -11,14 +12,12 @@
     <asset:stylesheet src="application.css"/>
 
     <g:layoutHead/>
+    <asset:javascript src="application.js"/>
 </head>
 <body ng-controller="MainController">
 <h1>[( 'Hello angularjs' )]</h1>
 <g:layoutBody/>
 
 <div class="footer" role="contentinfo"></div>
-
-<asset:javascript src="application.js"/>
-
 </body>
 </html>
