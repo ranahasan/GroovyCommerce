@@ -12,6 +12,10 @@ class ProductTypeController {
         return
     }
 
+    def getForm() {
+        render template: "form", contentType: "text/plain"
+    }
+
     def save() {}
 
     def update() {}
