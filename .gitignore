@@ -50,3 +50,4 @@ node_modules/
 # js-minfile
 ./grails-app/assets/javascripts/ng-grcommerce.min.js
 /*ng-grcommerce.min.js
+./grails-app/assets/vendor/
