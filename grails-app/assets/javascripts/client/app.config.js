@@ -20,6 +20,10 @@
                 controller: 'HomeController',
                 templateUrl: 'home/index'
             })
+            .when(ROUTES['PRODUCT-TYPE-LIST'].path, {
+                controller: 'TypeListController',
+                template: '<type-list><type-list/>'
+            })
             .when(ROUTES['PRODUCT-TYPE-EDIT'].path, {
                 controller: 'TypeFormController',
                 template: '<type-form><type-form/>'
