@@ -1,8 +1,8 @@
 <div class="container">
-    <form ng-submit="submitFormData()" name="formData" id="formData">
+    <form ng-submit="submitFormData()">
         <div class="form-group">
-            <label for="name"></label>
-            <input required class="form-control" name="name" type="text" id="name"/>
+            <label class="control-label" for="name">Product type</label>
+            <input required class="form-control" ng-model="name" name="name" type="text" id="name"/>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

@@ -1,22 +1,42 @@
 package dev.matija.groovycommerce
 
 import grails.converters.JSON
+//import grails.rest.RestfulController
 
+//class ProductTypeController extends RestfulController {
 class ProductTypeController {
+    /*
+    static responseFormats = ['json']
+    static allowedMethods = [save:'POST', update:'PUT', delete: 'DELETE',index: 'GET', show: 'GET']
+    ProductTypeController(){
+        super(ProductType)
+    }
+    */
+
     ProductTypeService productTypeService
     SortAndOrderService sortAndOrderService
 
     def index() {
-        Long companyId = (params?.companyId) ? Long.valueOf(params?.companyId) : 0
-        render(sortAndOrderService.sortAndOrderItemList(productTypeService.getEntitiesByCompanyId(companyId)) as JSON)
-        return
+        render(sortAndOrderService.sortAndOrderItemList(productTypeService.getEntities(), "typeName", "asc") as JSON)
+    }
+
+    def getList() {
+        render template: "list", contentType: "text/plain"
     }
 
     def getForm() {
         render template: "form", contentType: "text/plain"
     }
 
-    def save() {}
+    def get(Long id) {
+        render(productTypeService.getEntity(id) as JSON)
+    }
+
+    def save() {
+        System.out.println("Product type / save entity")
+        System.out.println(params)
+        render(productTypeService.saveEntity(params) as JSON)
+    }
 
     def update() {}
 
@@ -24,6 +44,5 @@ class ProductTypeController {
 
     def show(Long typeId) {
         render(productTypeService.getEntity(typeId) as JSON)
-        return
     }
 }

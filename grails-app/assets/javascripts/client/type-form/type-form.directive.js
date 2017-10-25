@@ -9,7 +9,7 @@
         return {
             restrict: 'EA',
             scope: false,
-            templateUrl: '/getForm'
+            templateUrl: '/productType/getForm'
         }
     }
 })();

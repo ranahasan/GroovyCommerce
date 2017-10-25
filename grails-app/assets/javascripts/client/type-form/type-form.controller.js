@@ -8,18 +8,19 @@
     TypeFormController.$inject = ['$scope', 'typeService'];
     function TypeFormController($scope, typeService) {
         $scope.pageTitle = "Enter product type";
-        $scope.formData = {};
+        $scope.name = '';
 
         $scope.submitFormData = submitFormData;
 
         function submitFormData() {
-            typeService.postEntity($scope.formData)
+            typeService.postEntity({name: $scope.name})
                 .then(function (response) {
-                    alert('Successfully saved product type');
+                    console.log(response.data);
+                    alert(response.data.message);
                 })
                 .catch(function (error) {
-                    alert(error);
-                    console.log(error);
+                    alert(error.message);
+                    console.log(error.message);
                 });
         }
     }
