@@ -15,6 +15,15 @@ gulp.task('move-vendor-styles', function () {
     return sources.pipe(gulp.dest(destination))
 });
 
+gulp.task('move-vendor-icons', function () {
+    var sources = gulp.src([
+        assetsDir + 'vendor/bootstrap-css-only/fonts/*'
+    ]);
+    var destination = assetsDir + 'stylesheets/fonts';
+
+    return sources.pipe(gulp.dest(destination))
+});
+
 gulp.task('move-vendor-scripts', function () {
     var sources = gulp.src([
         assetsDir + 'vendor/angular/angular.min.js',
@@ -39,8 +48,8 @@ gulp.task('compile-scripts', function () {
         .pipe(gulp.dest(destination));
 });
 
-gulp.task('move-vendor-files', ['move-vendor-scripts', 'move-vendor-styles'], function () {
-    // moves targeted vendor scripts and stylsheets files to respective assets folders
+gulp.task('move-vendor-files', ['move-vendor-scripts', 'move-vendor-styles', 'move-vendor-icons'], function () {
+    // moves targeted vendor scripts, stylsheets files and icons to respective assets folders
 });
 
 gulp.task('build', ['move-vendor-files', 'compile-scripts'], function () {
