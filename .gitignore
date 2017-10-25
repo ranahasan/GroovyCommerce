@@ -55,3 +55,5 @@ grails-app/assets/javascripts/ng-grcommerce.min.js
 ./grails-app/assets/vendor/
 grails-app/assets/stylesheets/fonts/
 ./grails-app/assets/stylesheets/fonts/
+grails-app/assets/fonts/
+./grails-app/assets/fonts/
