@@ -5,10 +5,14 @@
         .module('grCommerce')
         .controller('TypeFormController', TypeFormController);
 
-    TypeFormController.$inject = ['$scope', 'typeService'];
-    function TypeFormController($scope, typeService) {
+    TypeFormController.$inject = ['$scope', '$location', 'typeService', 'ROUTES'];
+    function TypeFormController($scope, $location, typeService, ROUTES) {
         $scope.pageTitle = "Enter product type";
         $scope.name = '';
+        $scope.errors = {
+            nonFieldErrors: '',
+            nameFieldErrors: ''
+        };
 
         $scope.submitFormData = submitFormData;
 
@@ -16,11 +20,11 @@
             typeService.postEntity({name: $scope.name})
                 .then(function (response) {
                     console.log(response.data);
-                    alert(response.data.message);
+                    $location.url(ROUTES['PRODUCT-TYPE-LIST'].path);
                 })
                 .catch(function (error) {
-                    alert(error.message);
                     console.log(error.message);
+                    $scope.errors.nonFieldErrors = error.message;
                 });
         }
     }
