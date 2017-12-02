@@ -14,7 +14,9 @@
 
             <div class="collapse navbar-collapse" ng-class="{'in':!collapsed}">
                 <ul class="nav navbar-nav">
-                    <li ng-repeat="route in routes" ng-class="{'active': isActive(route.uri)}">
+                    <li ng-repeat="route in routes"
+                        ng-class="{'active': isActive(route.uri)}"
+                        ng-if="route.isDisplayedInNav">
                         <a ng-click="collapsed=!collapsed" ng-href="[(route.url)]">[(route.name)]</a>
                     </li>
                 </ul>
