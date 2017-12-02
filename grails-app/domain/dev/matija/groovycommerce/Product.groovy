@@ -12,11 +12,9 @@ class Product {
     Double unitBasePrice = 0
     Date dateCreated
     Date lastUpdated
-    Long companyId
 
     static constraints = {
         productName blank: true, nullable: true, unique: false
         typeId nullable: true
-        companyId nullable: true, unique: false
     }
 }
