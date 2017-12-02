@@ -1,7 +1,9 @@
 <div class="container">
     <form ng-submit="submitFormData()">
         <div class="panel panel-primary">
-            <h1>[( pageTitle )]</h1>
+            <div class="panel-heading">
+                <h1>[( pageTitle )]</h1>
+            </div>
         </div>
         <div class="form-group">
             <div ng-show="errors.nonFieldErrors" class="alert alert-danger">[(errors.nonFieldErrors)]</div>
