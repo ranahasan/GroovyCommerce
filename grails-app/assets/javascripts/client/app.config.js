@@ -24,7 +24,7 @@
                 controller: 'TypeListController',
                 template: '<type-list><type-list/>'
             })
-            .when(ROUTES['PRODUCT-TYPE-EDIT'].path + '/:id?', {
+            .when(ROUTES['PRODUCT-TYPE-EDIT'].path + ':id?', {
                 controller: 'TypeFormController',
                 template: '<type-form><type-form/>'
             })
@@ -32,14 +32,14 @@
                 controller: 'ProductListController',
                 template: '<product-list><product-list/>'
             })
-            .when(ROUTES['PRODUCT-EDIT'].path + '/:id?', {
+            .when(ROUTES['PRODUCT-EDIT'].path + ':id?', {
                 controller: 'ProductFormController',
                 template: '<product-form><product-form/>'
-            })/*
-            .when(ROUTES['PRODUCT-SHOW'].path + '/:id', {
-                controller: 'ProductDetailsController',
-                template: '<product-details><product-details/>'
-            })*/
+            })
+            .when(ROUTES['PRODUCT-SHOW'].path + ':id', {
+                controller: 'ProductShowController',
+                template: '<product-show><product-show/>'
+            })
             .otherwise({redirectTo: ROUTES['HOME'].path});
     }
 })();
