@@ -1,3 +1,47 @@
 .offset-from-navbar {
     margin-top: 60px;
 }
+
+.navbar-default {
+    background-color: #feb672;
+}
+
+.jumbotron {
+    background-color: #fead59;
+    color: white;
+}
+
+.panel-primary {
+    border-color: #feaa45;
+}
+
+.panel-primary > .panel-heading,
+.panel-primary > table > .panel-heading{
+    background-color: #fead59;
+    color: white;
+    border-color: #feaa45;
+}
+
+.glyphicon {
+    color: #feaa45;
+}
+
+.navbar .navbar-brand {
+    color: white;
+}
+
+.navbar-brand > .glyphicon {
+    color: white;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #dadada;
+}
