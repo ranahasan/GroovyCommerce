@@ -23,7 +23,12 @@
         function init() {
             var routes = [];
             angular.forEach(ROUTES, function (value, key) {
-                this.push({url: value['path'], name: value['title']});
+                var isDisplayedInNave = !key.match('SHOW');
+                this.push({
+                    url: value['path'],
+                    name: value['title'],
+                    isDisplayedInNav: isDisplayedInNave
+                });
             }, routes);
             $scope.routes = routes;
         }
