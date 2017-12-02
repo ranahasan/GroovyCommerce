@@ -28,6 +28,10 @@ class ProductTypeController {
         render template: "form", contentType: "text/plain"
     }
 
+    def getSelect() {
+        render template: "select", contentType: "text/plain"
+    }
+
     def get(Long id) {
         render(productTypeService.getEntity(id) as JSON)
     }
@@ -40,7 +44,11 @@ class ProductTypeController {
 
     def update() {}
 
-    def delete() {}
+    def delete(Long typeId) {
+        System.out.println("Product type / delete entity")
+        System.out.println(typeId)
+        render(productTypeService.removeEntity(typeId) as JSON)
+    }
 
     def show(Long typeId) {
         render(productTypeService.getEntity(typeId) as JSON)
