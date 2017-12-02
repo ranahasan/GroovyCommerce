@@ -86,6 +86,8 @@ grails:
 endpoints:
     jmx:
         unique-names: true
+server:
+    port: 7531
 
 ---
 hibernate:
