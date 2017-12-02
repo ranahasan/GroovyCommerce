@@ -1,3 +1,5 @@
 <div class="container">
-    [( pageTitle )]
+    <div class="jumbotron">
+        <h1>[( pageTitle )]</h1>
+    </div>
 </div>
