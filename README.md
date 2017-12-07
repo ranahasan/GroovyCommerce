@@ -2,6 +2,8 @@
 
 Example web e-commerce application built using Grails and AngularJS.
 
+![screenshot list](https://github.com/traVaulta/GroovyCommerce/blob/master/project-screens/product-types.png)
+
 ## Features
 
 - CRUD product types
