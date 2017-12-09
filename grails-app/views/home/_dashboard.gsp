@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <span class="navbar-brand">
-                    Groovy Commerce<i class="glyphicon glyphicon-registration-mark"></i>
+                    Groovy Commerce 2017 <i class="glyphicon glyphicon-copyright-mark"></i>
                 </span>
             </div>
 
